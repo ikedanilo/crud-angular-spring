@@ -1,0 +1,36 @@
+# spring.application.name=crud-angular-spring
+
+# Configuração do Banco de Dados H2
+# spring.datasource.url=jdbc:h2:mem:testdb
+# spring.datasource.driverClassName=org.h2.Driver
+# spring.datasource.username=sa
+# spring.datasource.password=password
+# spring.jpa.datasource-plataform=org.hibernate.dialect.H2Dialect
+# # spring.jpa.show-sql=true -> somente para Amb. Desenvolvimento
+# spring.jpa.show-sql=true
+# #http://localhost:8080/h2-console/  --> Link para acessar o Banco de Dados H2
+
+spring:
+  # Em cada vm deve-se definir na variável de ambiente por exemplo: SPRING_PROFILES_ACTIVE=dev. No caso retira o trecho profiles abaixo.
+  # profiles:
+  #   active: dev
+
+  output:
+    ansi:
+      enabled: ALWAYS
+
+  datasource:
+    url: ${DATASOURCE_URL}
+    username: ${DATASOURCE_USER}
+    password: ${DATASOURCE_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+

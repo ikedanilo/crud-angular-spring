@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: crud-angular-spring-dev
+
+  output:
+    ansi:
+      enabled: ALWAYS
+
+  jpa:
+    show-sql: true
+

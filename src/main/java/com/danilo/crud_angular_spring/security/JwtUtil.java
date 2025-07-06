@@ -81,7 +81,7 @@ public class JwtUtil {
             Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token);
             return true; // Se não lançar exceção, o token é válido.
         }
-        catch (JwtException _) {
+        catch (JwtException ex) {
             // Captura qualquer exceção relacionada a JWT (assinatura inválida, token expirado, etc.)
             // e retorna false, indicando que o token não é válido.
             return false;

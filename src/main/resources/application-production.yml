@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: crud-angular-spring-production
+
+  jpa:
+    show-sql: false
+
